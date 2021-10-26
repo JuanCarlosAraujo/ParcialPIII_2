@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Afiliado.cs" />
+    <Compile Include="Liquidacion.cs" />
+    <Compile Include="LiquidacionIndividual.cs" />
+    <Compile Include="LiquidacionMensual.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -41,5 +41,10 @@ namespace GUIPresentacion
         {
             openFormChild(new FrmConsultarAfiliados());
         }
+
+        private void btnRegistroLiquidacion_Click(object sender, EventArgs e)
+        {
+            openFormChild(new FrmRegistrarLiquidacion());
+        }
     }
 }

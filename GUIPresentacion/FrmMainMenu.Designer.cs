@@ -33,12 +33,14 @@ namespace GUIPresentacion
             this.btnRegistrarAfiliado = new System.Windows.Forms.Button();
             this.panelChild = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistroLiquidacion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.btnRegistroLiquidacion);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnRegistrarAfiliado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,6 +77,16 @@ namespace GUIPresentacion
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnRegistroLiquidacion
+            // 
+            this.btnRegistroLiquidacion.Location = new System.Drawing.Point(3, 184);
+            this.btnRegistroLiquidacion.Name = "btnRegistroLiquidacion";
+            this.btnRegistroLiquidacion.Size = new System.Drawing.Size(194, 48);
+            this.btnRegistroLiquidacion.TabIndex = 3;
+            this.btnRegistroLiquidacion.Text = "Registrar liquidaciones";
+            this.btnRegistroLiquidacion.UseVisualStyleBackColor = true;
+            this.btnRegistroLiquidacion.Click += new System.EventHandler(this.btnRegistroLiquidacion_Click);
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,6 +107,7 @@ namespace GUIPresentacion
         private System.Windows.Forms.Button btnRegistrarAfiliado;
         private System.Windows.Forms.Panel panelChild;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistroLiquidacion;
     }
 }
 

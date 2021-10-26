@@ -8,15 +8,15 @@ namespace Entity
 {
     public class Afiliado
     {
-        public string TipoAfiliacion { get; set; }
+        public string TipoIdentificacion { get; set; }
         public string Nombre { get; set; }
         public DateTime FechaDeNacimiento { get; set; }
         public DateTime FechaAfiliacion { get; set; }
         public string Estado { get; set; }
 
-        public Afiliado(string tipoAfiliacion, string nombre, DateTime fechaDeNacimiento, DateTime fechaAfiliacion, string estado)
+        public Afiliado(string tipoIdentificacion, string nombre, DateTime fechaDeNacimiento, DateTime fechaAfiliacion, string estado)
         {
-            TipoAfiliacion = tipoAfiliacion;
+            TipoIdentificacion = tipoIdentificacion;
             Nombre = nombre;
             FechaDeNacimiento = fechaDeNacimiento;
             FechaAfiliacion = fechaAfiliacion;
@@ -29,7 +29,7 @@ namespace Entity
 
         public string FormatoParaArchivo()
         {
-            return $"{TipoAfiliacion};{Nombre};{FechaDeNacimiento};{FechaAfiliacion};{Estado}";
+            return $"{TipoIdentificacion};{Nombre};{FechaDeNacimiento};{FechaAfiliacion};{Estado}";
         }
 
     }

@@ -57,7 +57,7 @@ namespace GUIPresentacion
             if (dtpFechaNacimiento.Value > dtpFechaAfiliacion.Value)
             {
                 errorProvider1.SetError(dtpFechaNacimiento,
-                    "o	La fecha de Afiliación debe ser mayor o igual a la fecha de nacimiento");
+                    "La fecha de Afiliación debe ser mayor o igual a la fecha de nacimiento");
                 return false;
             }
             else return true;
@@ -65,13 +65,13 @@ namespace GUIPresentacion
 
         private void cmbEstado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(cmbEstado, "porfavor no escriba aqui, selecione los datos previamente cargados");
+            errorProvider1.SetError(cmbEstado, "porfavor no escriba aqui, seleccione los datos previamente cargados");
             e.Handled = true;
         }
 
         private void cmbID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(cmbID, "porfavor no escriba aqui, selecione los datos previamente cargados");
+            errorProvider1.SetError(cmbID, "porfavor no escriba aqui, seleccione los datos previamente cargados");
             e.Handled = true;
         }
 

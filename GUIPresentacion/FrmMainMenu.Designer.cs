@@ -32,12 +32,14 @@ namespace GUIPresentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegistrarAfiliado = new System.Windows.Forms.Button();
             this.panelChild = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnRegistrarAfiliado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -63,6 +65,16 @@ namespace GUIPresentacion
             this.panelChild.Size = new System.Drawing.Size(600, 450);
             this.panelChild.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 48);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Consultar Afiliados";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +94,7 @@ namespace GUIPresentacion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegistrarAfiliado;
         private System.Windows.Forms.Panel panelChild;
+        private System.Windows.Forms.Button button1;
     }
 }
 

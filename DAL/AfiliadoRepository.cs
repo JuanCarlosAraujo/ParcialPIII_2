@@ -17,6 +17,16 @@ namespace DAL
             writer.Close();
             file.Close();
         }
+        public Afiliado BuscarID(int id)
+        {
+            List<Afiliado> listaCandidato = ConsultarTodos();
+            foreach (var candidato in listaCandidato)
+            {
+                if (candidato.Identificacion.Equals(id))
+                    return candidato;
+            }
+            return null;
+        }
         public List<Afiliado> ConsultarTodos()
         {
             List<Afiliado> afiliadoDelFile = new List<Afiliado>();
@@ -41,10 +51,11 @@ namespace DAL
             Afiliado afiliado = new Afiliado();
 
             afiliado.TipoIdentificacion = datoAfiliado[0];
-            afiliado.Nombre = datoAfiliado[1];
-            afiliado.FechaDeNacimiento = Convert.ToDateTime(datoAfiliado[2]);
-            afiliado.FechaAfiliacion = Convert.ToDateTime(datoAfiliado[3]);
-            afiliado.Estado = datoAfiliado[4];
+            afiliado.Identificacion = Convert.ToInt32(datoAfiliado[1]);
+            afiliado.Nombre = datoAfiliado[2];
+            afiliado.FechaDeNacimiento = Convert.ToDateTime(datoAfiliado[3]);
+            afiliado.FechaAfiliacion = Convert.ToDateTime(datoAfiliado[4]);
+            afiliado.Estado = datoAfiliado[5];
 
             return afiliado;
 

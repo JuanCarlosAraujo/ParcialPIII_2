@@ -42,6 +42,8 @@ namespace GUIPresentacion
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +89,7 @@ namespace GUIPresentacion
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(58, 206);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(304, 207);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(225, 20);
             this.dtpFechaNacimiento.TabIndex = 4;
@@ -95,7 +97,7 @@ namespace GUIPresentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 190);
+            this.label3.Location = new System.Drawing.Point(301, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 5;
@@ -104,7 +106,7 @@ namespace GUIPresentacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(301, 190);
+            this.label4.Location = new System.Drawing.Point(301, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 13);
             this.label4.TabIndex = 7;
@@ -112,7 +114,7 @@ namespace GUIPresentacion
             // 
             // dtpFechaAfiliacion
             // 
-            this.dtpFechaAfiliacion.Location = new System.Drawing.Point(304, 206);
+            this.dtpFechaAfiliacion.Location = new System.Drawing.Point(304, 257);
             this.dtpFechaAfiliacion.Name = "dtpFechaAfiliacion";
             this.dtpFechaAfiliacion.Size = new System.Drawing.Size(225, 20);
             this.dtpFechaAfiliacion.TabIndex = 6;
@@ -123,7 +125,7 @@ namespace GUIPresentacion
             this.cmbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cmbEstado.Location = new System.Drawing.Point(155, 250);
+            this.cmbEstado.Location = new System.Drawing.Point(155, 257);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(77, 21);
             this.cmbEstado.TabIndex = 9;
@@ -132,7 +134,7 @@ namespace GUIPresentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 250);
+            this.label5.Location = new System.Drawing.Point(59, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 8;
@@ -140,7 +142,7 @@ namespace GUIPresentacion
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(304, 250);
+            this.button1.Location = new System.Drawing.Point(304, 295);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(225, 23);
             this.button1.TabIndex = 10;
@@ -152,11 +154,30 @@ namespace GUIPresentacion
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(55, 207);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Identificacion";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(155, 205);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(77, 20);
+            this.txtID.TabIndex = 11;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
+            // 
             // FrmRegistroAfiliado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label5);
@@ -191,5 +212,7 @@ namespace GUIPresentacion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

@@ -39,6 +39,11 @@ namespace GUIPresentacion
                 errorProvider1.SetError(cmbID, "Campos vacios");
                 return false;
             }
+            else if (txtID.Text == "")
+            {
+                errorProvider1.SetError(txtID, "Campos vacios");
+                return false;
+            }
             else if (txtNombre.Text == "")
             {
                 errorProvider1.SetError(txtNombre, "Campos vacios");
@@ -51,7 +56,15 @@ namespace GUIPresentacion
             }
             else return true;
         }
-
+        private bool ValidarRepetido()
+        {
+            var afiliado = afiliadoService.BuscarID(Convert.ToInt32(txtID.Text));
+            if (afiliado.Repetido)
+            {
+                MessageBox.Show("Ya existe un afilidiado con esta ID", "Informacion al guardar");
+            }
+            return afiliado.Repetido;
+        }
         private bool ValidarFecha()
         {
             if (dtpFechaNacimiento.Value > dtpFechaAfiliacion.Value)
@@ -77,7 +90,7 @@ namespace GUIPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ValidarCamposVacios() && ValidarFecha())
+            if (ValidarCamposVacios() && ValidarFecha() && !ValidarRepetido())
             {
                 MessageBox.Show(Guardar(), "Informacion al guardar");
             }
@@ -85,10 +98,21 @@ namespace GUIPresentacion
 
         private string Guardar()
         {
-            afiliado = new Afiliado(cmbID.Text, txtNombre.Text, dtpFechaNacimiento.Value, dtpFechaAfiliacion.Value, cmbEstado.Text );
+            afiliado = new Afiliado(cmbID.Text, Convert.ToInt32(txtID.Text),
+                txtNombre.Text, dtpFechaNacimiento.Value, dtpFechaAfiliacion.Value, cmbEstado.Text );
             return afiliadoService.Guardar(afiliado);
         }
 
-
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                errorProvider1.SetError(txtID, "solo se admiten numeros");
+                e.Handled = true;
+                return;
+            }
+            else errorProvider1.Clear();
+        }
     }
+    
 }

@@ -33,6 +33,23 @@ namespace BLL
                 return "Se ha presentado la excepcion: " + e.Message;
             }
         }
+        public AfiliadoResponse BuscarID(int codigoLiquidacion)
+        {
+            try
+            {
+                Afiliado candidatoDelFile = afiliadoRepository.BuscarID(codigoLiquidacion);
+                if (candidatoDelFile != null)
+                {
+                    return new AfiliadoResponse(candidatoDelFile);
+                }
+                else
+                    return new AfiliadoResponse("No existe ninguna liquidacion registrada con este codigo.");
+            }
+            catch (Exception e)
+            {
+                return new AfiliadoResponse("Se ha presentado la siguiente excepcion: " + e.Message);
+            }
+        }
 
         public AfiliadoConsultarResponse ConsultarTodos()
         {
